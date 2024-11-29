@@ -3,18 +3,24 @@
   <meta charset="UTF-8">
   <title>Which Subreddit?</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="">
-    <style>
-    html,body {font-family:"Verdana",sans-serif}
-    h1,h2,h3,h4,h5,h6 {font-family:"Segoe UI",sans-serif}
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <body>
-    <h1>Which Subreddit?</h1>
-    <input id="post-title"></input></br>
-    <textarea id="post-body"></textarea></br>
-    <button id="classify-button">Click to Classify</button>
-    <p id="subreddit"></p>
-
+    <div id="container">
+      <div id="header">
+        <h1>Subreddit Classifier</h1>
+        <h2>Find the subreddit for you with just a title and a text</h2>  
+      </div>
+      <div id="post-container">
+        <textarea id="post-title" placeholder="Title"></textarea></br>
+        <textarea id="post-body" placeholder="Text"></textarea></br>
+        <button id="classify-button">Classify</button>
+      </div>
+      <div id="classifications">
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
