@@ -37,6 +37,15 @@ h2 {
   align-items: center;
 }
 
+#header h1 {
+  display: flex;
+  align-items: center;
+}
+
+#header h1 img {
+  margin-left: 0.5em;
+}
+
 #post-container {
   width: 100%;
   display: flex;

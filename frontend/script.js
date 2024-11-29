@@ -15,7 +15,7 @@ button.addEventListener("click", async (e) => {
     classifications.insertAdjacentHTML(
       "beforeend",
       `<div class="classification">
-        <a href="https://www.reddit.com/r/${subreddit}/">r/${subreddit}</a>
+        <a href="https://www.reddit.com/r/${subreddit}/">r/${subreddit} - ${Math.round(percentage * 1000) / 10}%</a>
         <div class="subreddit-bar">
           <div class="fill" style="width: ${100 * percentage}%"></div>
         </div>
