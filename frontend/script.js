@@ -6,8 +6,7 @@ button.addEventListener("click", async (e) => {
 
   postTitle = document.getElementById("post-title").value;
   postBody = document.getElementById("post-body").value;
-  postText = `${postTitle} ${postBody}`;
-  const response = await fetch(`http://127.0.0.1:3000/predict?prompt=${postText}&threshold=0.05`);
+  const response = await fetch(`http://127.0.0.1:3000/predict?title=${postTitle}&text=${postBody}`);
   const json = await response.json();
   
   subreddits = Object.entries(json.prediction).sort(([s1, p1], [s2, p2]) => {return p2 - p1;})
@@ -15,7 +14,7 @@ button.addEventListener("click", async (e) => {
     classifications.insertAdjacentHTML(
       "beforeend",
       `<div class="classification">
-        <a href="https://www.reddit.com/r/${subreddit}/">r/${subreddit} - ${Math.round(percentage * 1000) / 10}%</a>
+        <p><a href="https://www.reddit.com/r/${subreddit}/">r/${subreddit}</a> - ${Math.round(percentage * 1000) / 10}%</p>
         <div class="subreddit-bar">
           <div class="fill" style="width: ${100 * percentage}%"></div>
         </div>

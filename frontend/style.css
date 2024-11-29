@@ -70,6 +70,7 @@ h2 {
 }
 
 #post-title {
+  overflow: hidden;
   resize: none;
   height: 1em;
 }
@@ -112,10 +113,11 @@ h2 {
   margin-top: 2em;
 }
 
-.classification a {
+.classification a,p {
   color: var(--gray);
   font-size: 32px;
   text-decoration: none;
+  margin: 0;
 }
 
 .classification a:hover{
